@@ -18,7 +18,10 @@ class HCaptcha
     {
         $this->sitekey = $sitekey;
         $this->secret = $secret;
-        $this->guzzleOptions = array_merge(config('hcaptcha.guzzle_options'), $guzzleOptions);
+        $this->guzzleOptions = array_merge(
+            (array) config('hcaptcha.guzzle_options', []),
+            $guzzleOptions
+        );
     }
 
     public function getClient()

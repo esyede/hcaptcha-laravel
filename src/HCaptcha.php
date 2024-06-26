@@ -73,7 +73,7 @@ class HCaptcha
 
         $data = json_decode($response->getBody());
 
-        if (!optional($data)->success !== true) {
+        if (optional($data)->success !== true) {
             return false;
         }
 
@@ -86,7 +86,7 @@ class HCaptcha
         $html = [];
 
         foreach ($attributes as $key => $value) {
-            $html[] = $key.'="'.$value.'"';
+            $html[] = $key . '="' . $value . '"';
         }
 
         return implode(' ', $html);

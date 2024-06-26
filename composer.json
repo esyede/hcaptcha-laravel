@@ -1,0 +1,45 @@
+{
+    "name": "esyede/hcaptcha-laravel",
+    "type": "library",
+    "description": "Integrate hCaptcha into your Laravel application.",
+    "keywords": ["captcha", "hcaptcha", "laravel"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Suyadi",
+            "email": "suyadi.1992@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2|^8.0",
+        "guzzlehttp/guzzle": "^6.2|^7.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Esyede\\Laravel\\HCaptcha\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Esyede\\Laravel\\HCaptcha\\Test\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Esyede\\Laravel\\HCaptcha\\HCaptchaServiceProvider"
+            ],
+            "aliases": {
+                "HCaptcha": "Esyede\\Laravel\\HCaptcha\\Facades\\HCaptcha"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
